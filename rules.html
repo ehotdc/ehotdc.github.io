@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Webpage</title>
+    <style>
+        @font-face {
+            font-family: 'TDCNET-Regular';
+            src: url('./static/TDCNET-Regular.woff') format('woff');
+        }
+        @font-face {
+            font-family: 'TDCNET-Bold';
+            src: url('./static/TDCNET-Bold.woff') format('woff');
+        }
+        body {
+            margin:0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'TDCNET-Regular';
+            background-color:#bed7f5;
+            color: #503C3C;
+        }
+
+        .logo img {
+            height: 45px; 
+            width: auto; 
+        }
+        .content-wrapper {
+            width: 50%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .navigation a{
+            font-size: 1.5em;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            width: 100%;
+            font-family: 'TDCNET-Bold';
+            transition: background-color 0.4s ease;  /* Transition effect for smooth color change */
+        }
+
+        .header:hover {
+            background-color: #F0DCC8;  /* Color on hover */
+        }
+        .header a {
+            text-decoration: none;
+            color: #19285f;
+            transition: color 0.4s ease;  /* Transition effect for smooth color change */
+            margin: 10px;
+        }
+
+        .header a:hover {
+            color: #D25555;  /* Color on hover */
+        }
+        .title {
+            margin-top: 40px;
+            text-align: center;
+            font-family: 'TDCNET-Bold';
+            font-size: 6em;
+            color: #19285f;
+
+        }
+        .page-divider {
+            margin: 20px 0;
+            height: 2px;
+            background: #333;
+            width: 100%;
+        }
+        section {
+            margin: 20px 0;
+        }
+        p{
+            font-size: 22px;
+            line-height: 1.4;
+            margin-bottom: 0px;
+            margin-top: 5px;
+            
+
+text-align: justify;
+text-justify: distribute;
+text-align-last: left;
+
+        }
+        h1{
+            font-size: 40px;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+        li{
+            font-size:20px;
+            line-height: 1.5;
+            padding: 5px;
+        }
+        .btm-right-container{
+            display: flex;
+            width: 100%;
+            justify-content: right;
+        }
+        .btm-right{
+            right: 0;
+            bottom: 0;
+            max-width: 50%; /* This limits the image width to 50% of its container */
+            z-index: 1; /* This ensures the image is behind the text */
+            position: relative;
+        }
+
+        @media screen and (max-width: 768px) {
+            /* change width to 90% for small screens */
+            .content-wrapper {
+                width: 90%;
+            }
+
+            /* change font-size for small screens */
+            .navigation a {
+                font-size: 1.2em;
+            }
+
+            .title {
+                font-size: 3em;
+            }
+            
+            /* Stack the elements vertically on small screens */
+            .header {
+                flex-direction: column;
+            }
+
+            /* Adjust logo and navigation layout on small screens */
+            .header .logo, .header .navigation {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="header">
+        <div class="logo logo-left">
+            <img src="./static/tdcnet.png">
+        </div>
+        <div class="navigation">
+            <a href="index.html">Home</a>
+            <a href="faq.html">FAQ</a>
+            <a href="rules.html">Rules</a>
+            <a href="https://www.eventbrite.dk/e/cyberskills-tdc-net-ctf-tickets-671388209207">Signup</a>
+        </div>
+        <div class="logo logo-right">
+            <img src="./static/cyberskills.png">
+        </div>
+    </div>
+    <div class="content-wrapper">
+    <div class="title">
+        TDC NET CTF
+    </div>
+    <div class="page-divider"></div>
+    <section>
+        <h1>RULES</h1>
+        <p>Yes, you of course have to abide by rules in this CTF. TL;DR: <b>be nice, don't not be nice.</b></p>
+        <ol>
+            <li>You will need to participate in teams. 3-4 persons.</li>
+            <li>The event requires physical attendance for the majority of the team. (3 person teams may have 1 remote player, 4 person teams may have 2).</li>
+            <li>All on-site participants are required to secure a ticket for the event, this is free and done through cyberskills and eventbrite.</li>
+            <li>Teams are prohibited from sharing flags with other teams. Please just don't do it.</li>
+            <li>Do not attack the competition's infrastructure, don't attack CTFd etc.</li>
+            <li>Don't attack other teams challenge instances.</li>
+            <li>Unless specified, do not attempt to perform container/vm escapes.</li>
+            <li>If you discover a mistake in a challenge or the infrastructure, please contact us.</li>
+            <li>The winning team is determined by the highest points scored at the end of the competition. If more than 1 team is at the top of the scoreboard, then the time of scoring is used to determine the winner.</li>
+            <li>When at the venue, please do not leave the designated areas. We perform our own physical penetration tests, we don't need outside help :-) .</li>
+        </ol>
+    
+    </section>
+    </div>
+    <div class="btm-right-container">
+        <img class="btm-right" src="./static/out.svg">
+    </div>
+</body>
+</html>

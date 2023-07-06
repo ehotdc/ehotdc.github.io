@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Webpage</title>
+    <style>
+        @font-face {
+            font-family: 'TDCNET-Regular';
+            src: url('./static/TDCNET-Regular.woff') format('woff');
+        }
+        @font-face {
+            font-family: 'TDCNET-Bold';
+            src: url('./static/TDCNET-Bold.woff') format('woff');
+        }
+        body {
+            margin:0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'TDCNET-Regular';
+            background-color:#bed7f5;
+            color: #503C3C;
+        }
+
+        .logo img {
+            height: 45px; 
+            width: auto; 
+        }
+        .content-wrapper {
+            width: 50%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .navigation a{
+            font-size: 1.5em;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            width: 100%;
+            font-family: 'TDCNET-Bold';
+            transition: background-color 0.4s ease;  /* Transition effect for smooth color change */
+        }
+
+        .header:hover {
+            background-color: #F0DCC8;  /* Color on hover */
+        }
+        .header a {
+            text-decoration: none;
+            color: #19285f;
+            transition: color 0.4s ease;  /* Transition effect for smooth color change */
+            margin: 10px;
+        }
+
+        .header a:hover {
+            color: #D25555;  /* Color on hover */
+        }
+        .title {
+            margin-top: 40px;
+            text-align: center;
+            font-family: 'TDCNET-Bold';
+            font-size: 6em;
+            color: #19285f;
+
+        }
+        .page-divider {
+            margin: 20px 0;
+            height: 2px;
+            background: #333;
+            width: 100%;
+        }
+        section {
+            margin: 20px 0;
+        }
+        p{
+            font-size: 22px;
+            line-height: 1.4;
+            margin-bottom: 0px;
+            margin-top: 5px;
+            
+
+text-align: justify;
+text-justify: distribute;
+text-align-last: left;
+
+        }
+        h1{
+            font-size: 40px;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+        li{
+            font-size:20px;
+            line-height: 1.5;
+            padding: 5px;
+        }
+        dt,dl{
+            font-size:20px;
+            line-height: 1.5;
+            padding: 5px;
+        }
+        .btm-right-container{
+            display: flex;
+            width: 100%;
+            justify-content: right;
+        }
+        .btm-right{
+            right: 0;
+            bottom: 0;
+            max-width: 50%; /* This limits the image width to 50% of its container */
+            z-index: 1; /* This ensures the image is behind the text */
+            position: relative;
+        }
+
+        @media screen and (max-width: 768px) {
+            /* change width to 90% for small screens */
+            .content-wrapper {
+                width: 90%;
+            }
+
+            /* change font-size for small screens */
+            .navigation a {
+                font-size: 1.2em;
+            }
+
+            .title {
+                font-size: 3em;
+            }
+            
+            /* Stack the elements vertically on small screens */
+            .header {
+                flex-direction: column;
+            }
+
+            /* Adjust logo and navigation layout on small screens */
+            .header .logo, .header .navigation {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="header">
+        <div class="logo logo-left">
+            <img src="./static/tdcnet.png">
+        </div>
+        <div class="navigation">
+            <a href="index.html">Home</a>
+            <a href="faq.html">FAQ</a>
+            <a href="rules.html">Rules</a>
+            <a href="https://www.eventbrite.dk/e/cyberskills-tdc-net-ctf-tickets-671388209207">Signup</a>
+        </div>
+        <div class="logo logo-right">
+            <img src="./static/cyberskills.png">
+        </div>
+    </div>
+    <div class="content-wrapper">
+    <div class="title">
+        TDC NET CTF
+    </div>
+    <div class="page-divider"></div>
+    <section>
+        <h1>FAQ</h1>
+        <dl>
+            <dt><b>Q1: How many members can a team have?</b></dt>
+            <dd>A: A team can have 3 or 4 members.</dd>
+            <br>
+            <dt><b>Q2: Is the event physical or remote</b></dt>
+            <dd>A: The event will be mainly physical, a team may have up to half of their members sitting remote (1 person for 3 person teams, 2 persons for 4 person teams).</dd>
+            <br>
+            <dt><b>Q3: How do I register for the competition?</b></dt>
+            <dd>A: You can register through eventbrite.</dd>
+            <br>
+            <dt><b>Q4: Will there be prizes??</b></dt>
+            <dd>A: Yes, there will be prizes for the top 3 teams. They are to be announced.</dd>
+            <br>
+            <dt><b>Q5: How do I register for the competition?</b></dt>
+            <dd>A: You can register through the event's official website.</dd>
+            <br>
+            <dt><b>Q6: What if I don't have a team?</b></dt>
+            <dd>A: Sign up and show up, we will make sure everyone has a team before we start.</dd>
+            <br>
+            <dt><b>Q7: I pwned the challenge, where can I find the flag?</b></dt>
+            <dd>A: In the following locations <i>/</i> , <i>/root</i> , <i>C:/</i>. Unless otherwise specified.</dd>
+            <br>
+            <dt><b>Q8: What special hardware will I need to bring?</b></dt>
+            <dd>A: Just your computer! If you will need some special equipment, we will provide it.</dd>
+            <br>
+            <dt><b>Q9: What is the flag format?</b></dt>
+            <dd>A: The flag format will be: <blockquote>TDCNET{flag_here}</blockquote></dd>
+            <br>
+            <dt><b>Q10: What about food and drinks?</b></dt>
+            <dd>A: We provide all food and drinks. We will of course try to cater to as many preferences as possible, non-pork, vegan, pesca-pescatarians and alike, but if we appreciate a heads up if you have a unique dietary restriction :-)</dd>
+            <br>
+            <dt><b>Q11: Will there be talks and workshops?</b></dt>
+            <dd>A: This year we wanted to have more time for the CTF, so we will only give an introductory talk and welcome, so you can get straight to hacking.</dd>
+            </dl>    
+    
+    </section>
+    </div>
+    <div class="btm-right-container">
+        <img class="btm-right" src="./static/out.svg">
+    </div>
+</body>
+</html>
