@@ -120,14 +120,6 @@ dt,dl{
         width: 90%;
     }
 
-    /* change font-size for small screens */
-    .navigation a {
-        font-size: 1.2em;
-    }
-
-    .title {
-        font-size: 3em;
-    }
     
     /* Stack the elements vertically on small screens */
     
